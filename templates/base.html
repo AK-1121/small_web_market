@@ -18,8 +18,9 @@
     <hr />
     <table>
         <tr>
-            {% for cell in [: %}
-            <td> </td>
+            {% for p_type in product_types: %}
+            <td>{{ p_type.name }}</td>
+            {% endfor %}
         </tr>
     </table>
     {% endblock %}

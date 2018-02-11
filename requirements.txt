@@ -1,4 +1,5 @@
-Flask
-flask_sqlalchemy
-sqlalchemy
-Flask-Migrate
+Flask==0.12.2
+Flask-Resize==2.0.4
+SQLAlchemy==1.2.2
+alembic==0.9.7
+Flask-Migrate==2.1.1

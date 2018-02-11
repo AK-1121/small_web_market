@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<ul>
+    {% for item in items %}
+    <li>
+        <a href="/product_page/{{ product_type }}/{{ item.id}}">{{ item.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% if not items %}
+    Этот элемент - пуст. <a href="/{{ back_link }}">Вернуться</a>
+{% endif %}
+{% endblock %}

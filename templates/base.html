@@ -16,10 +16,10 @@
         </tr>
     </table>
     <hr />
-    <table>
+    <table style="width:100%">
         <tr>
             {% for p_type in product_types: %}
-            <td>{{ p_type.name }}</td>
+            <td><a href="/products/?type={{p_type.table_name}}">{{ p_type.name }}</a></td>
             {% endfor %}
         </tr>
     </table>

@@ -1,11 +1,7 @@
 import json
 
 from flask import Flask, render_template
-from jinja2 import Template
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
 import sqlalchemy as sa
-# from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, scoped_session
 
 import config
@@ -14,7 +10,6 @@ from models import Base, ProductTypes, ComputerTypes, Laptops, Desktops, Shops, 
 
 app = Flask(__name__, template_folder=config.TEMPLATES_DIR, static_folder=config.STATIC_DIR)
 
-# migrate = Migrate(app, db)
 engine = sa.create_engine(config.DB_PATH, echo=True)
 session_factory = sessionmaker(bind=engine)
 Session = scoped_session(session_factory)
